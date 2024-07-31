@@ -23,10 +23,10 @@ const Navbar = ({ tabs }: NavbarProps) => {
   });
 
   const defaultSelectedTabStyles = [
-    "[&:nth-child(1)]:dark:bg-white [&:nth-child(1)]:bg-neutral-950",
-    "[&:nth-child(2)]:dark:bg-white [&:nth-child(2)]:bg-neutral-950",
-    "[&:nth-child(3)]:dark:bg-white [&:nth-child(3)]:bg-neutral-950",
-    "[&:nth-child(4)]:dark:bg-white [&:nth-child(4)]:bg-neutral-950",
+    " [&:nth-child(1)]:bg-primary",
+    "[&:nth-child(2)]:bg-primary",
+    " [&:nth-child(3)]:bg-primary",
+    "[&:nth-child(4)]:bg-primary",
   ];
 
   useEffect(() => {
