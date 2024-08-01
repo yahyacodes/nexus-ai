@@ -14,8 +14,8 @@ const Faqs = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
-      <h1 className="text-4xl font-bold text-secondary text-center capitalize max-w-md mx-auto">
+    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl mb-32">
+      <h1 className="md:text-4xl text-2xl font-bold text-secondary text-center capitalize max-w-md mx-auto">
         You have <span className="text-primary">questions</span>, we have your{" "}
         <span className="text-primary">answers</span>
       </h1>
@@ -27,7 +27,7 @@ const Faqs = () => {
       <div className="mt-10 text-secondary">
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mt-4">
           <div className="flex items-center justify-between space-x-4 px-4 rounded-3xl border p-2">
-            <h1 className="text-2xl font-semibold">
+            <h1 className="lg:text-2xl text-xl font-semibold">
               What are the benefits of NexusAI task automation?
             </h1>
             <CollapsibleTrigger asChild>
@@ -48,7 +48,7 @@ const Faqs = () => {
 
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mt-4">
           <div className="flex items-center justify-between space-x-4 px-4 rounded-3xl border p-2">
-            <h1 className="text-2xl font-semibold">
+            <h1 className="lg:text-2xl text-xl font-semibold">
               What types of tasks can NexusAI automate?
             </h1>
             <CollapsibleTrigger asChild>
@@ -69,7 +69,7 @@ const Faqs = () => {
 
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="mt-4">
           <div className="flex items-center justify-between space-x-4 px-4 rounded-3xl border p-2">
-            <h1 className="text-2xl font-semibold">
+            <h1 className="lg:text-2xl text-xl font-semibold">
               How does NexusAI task automation work?
             </h1>
             <CollapsibleTrigger asChild>

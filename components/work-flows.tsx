@@ -6,9 +6,9 @@ import { Button } from "./ui/button";
 const Workflows = () => {
   return (
     <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
-      <div className="grid grid-cols-3 gap-0">
-        <div className="col-span-2">
-          <h1 className="text-4xl max-w-md font-bold text-secondary">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-0 ">
+        <div className="lg:col-span-2 mx-auto mb-10">
+          <h1 className="md:text-4xl text-2xl max-w-md font-bold text-secondary">
             Workflow with <span className="text-primary">Nexus AI</span>{" "}
             Automation
           </h1>
@@ -30,7 +30,7 @@ const Workflows = () => {
 
           <Button className="mt-6 py-2">Start Free Trial</Button>
         </div>
-        <div className="col-span-1 -mx-20">
+        <div className="lg:col-span-1 xl:-mx-20 mx-auto mt-10">
           <div className="w-full">
             <Image
               src="/assets/workflow.png"

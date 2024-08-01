@@ -6,8 +6,8 @@ import { Button } from "./ui/button";
 const HarnessingAI = () => {
   return (
     <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-10 justify-between max-w-5xl">
-      <div className="grid grid-cols-3 gap-0">
-        <div className="col-span-1 -mx-10 mt-6">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-0">
+        <div className="lg:col-span-1 xl:-mx-10 mt-6 mx-auto mb-10">
           <div className="w-full">
             <Image
               src="/assets/ai-circle.png"
@@ -20,8 +20,8 @@ const HarnessingAI = () => {
           </div>
         </div>
 
-        <div className="col-span-2 mx-28">
-          <h1 className="text-4xl max-w-md font-bold text-secondary">
+        <div className="lg:col-span-2 lg:mx-28 mx-auto mt-10">
+          <h1 className="md:text-4xl text-2xl max-w-md font-bold text-secondary">
             Harnessing <span className="text-primary">Nexus AI</span> for
             business success
           </h1>

@@ -12,14 +12,14 @@ const Services = () => {
   return (
     <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
       <div className="mx-auto max-w-lg mb-14">
-        <h1 className="text-4xl font-bold text-secondary text-center">
+        <h1 className="md:text-4xl text-2xl font-bold text-secondary text-center">
           <span className="text-primary">AI Driven</span> Task Automation
           Services
         </h1>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <MailCheck className="text-primary" />
           <h1 className="mt-4 font-semibold text-lg">
             Intelligent Email Management
@@ -52,7 +52,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="col-span-2 bg-white rounded-3xl p-8 border">
+        <div className="lg:col-span-2 bg-white rounded-3xl p-8 border">
           <Workflow className="text-primary" />
           <h1 className="mt-4 font-semibold text-lg">Workflow Automation</h1>
           <div className="text-customColor max-w-xl mt-4">
@@ -80,8 +80,8 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-4 mt-4">
-        <div className="col-span-2 bg-white rounded-3xl p-8 border">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-4 mt-4">
+        <div className="lg:col-span-2 bg-white rounded-3xl p-8 border">
           <HandCoins className="text-primary" />
           <h1 className="mt-4 font-semibold text-lg">
             Financial Process Automation
@@ -112,7 +112,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <CalendarCheck2 className="text-primary" />
           <h1 className="mt-4 font-semibold text-lg">
             Smart Calendar Management

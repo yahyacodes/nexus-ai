@@ -7,13 +7,15 @@ import Navbar from "@/components/navbar";
 import Pricing from "@/components/princing";
 import Services from "@/components/services";
 import Testimonials from "@/components/testimonials";
+import Trustees from "@/components/trustees";
 import Workflows from "@/components/work-flows";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Navbar tabs={["Apps", "Components", "Websites", "Other stuff"]} />
+      <Navbar tabs={["About", "Services", "Pricing"]} />
       <Hero />
+      <Trustees />
       <Services />
       <Workflows />
       <HarnessingAI />

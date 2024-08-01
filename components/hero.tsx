@@ -6,10 +6,10 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 text-center justify-between max-w-5xl">
-      <h1 className="text-7xl font-bold text-secondary">
+      <h1 className="lg:text-7xl md:text-5xl text-3xl font-bold text-secondary">
         <span className="text-primary">Automate</span> Your Workflow,
       </h1>
-      <h1 className="text-7xl font-bold">
+      <h1 className="lg:text-7xl md:text-5xl text-3xl font-bold">
         Amplify <span className="text-primary">Your Productivity</span>
       </h1>
       <p className="text-customColor max-w-md mx-auto mt-8">

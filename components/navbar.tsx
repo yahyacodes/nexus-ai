@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Button } from "./ui/button";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 interface NavbarProps {
   tabs: string[];
@@ -30,64 +30,85 @@ const Navbar = ({ tabs }: NavbarProps) => {
   ];
 
   useEffect(() => {
-    setCurrentLink(() => ({
-      left: document.getElementById("uuu-btn-" + defaultSelectedTabIndex)
-        ?.offsetLeft,
-      width: document
-        .getElementById("uuu-btn-" + defaultSelectedTabIndex)
-        ?.getBoundingClientRect().width,
-      index: defaultSelectedTabIndex,
-    }));
+    const updateCurrentLink = () => {
+      const button = document.getElementById(
+        "uuu-btn-" + defaultSelectedTabIndex
+      );
+      if (button) {
+        const rect = button.getBoundingClientRect();
+        const parentRect = button.parentElement?.getBoundingClientRect();
+        setCurrentLink({
+          left: rect.left - (parentRect?.left || 0),
+          width: rect.width,
+          index: defaultSelectedTabIndex,
+        });
+      }
+    };
+
+    updateCurrentLink();
+    window.addEventListener("resize", updateCurrentLink);
+    return () => window.removeEventListener("resize", updateCurrentLink);
   }, []);
 
   return (
     <div
       className={
-        "w-[60rem] border mt-4 border-neutral-300 rounded-full flex gap-5 justify-center p-2 backdrop-blur-2xl"
+        "lg:w-[60rem] md:w-[40rem] w-[25rem] border mt-4 border-neutral-300 rounded-full flex items-center justify-between p-2 relative"
       }
     >
-      {tabs.map((link, i) => (
-        <button
-          key={i}
-          id={"uuu-btn-" + i}
-          onClick={() => {
-            fired.current = true;
-            setCurrentLink(() => ({
-              left: document.getElementById("uuu-btn-" + i)?.offsetLeft,
-              width: document
-                .getElementById("uuu-btn-" + i)
-                ?.getBoundingClientRect().width,
-              index: i,
-            }));
+      <div className="flex-1"></div> {/* Left spacer */}
+      <div className="relative flex gap-5">
+        {tabs.map((link, i) => (
+          <button
+            key={i}
+            id={"uuu-btn-" + i}
+            onClick={() => {
+              fired.current = true;
+              const button = document.getElementById("uuu-btn-" + i);
+              if (button) {
+                const rect = button.getBoundingClientRect();
+                const parentRect =
+                  button.parentElement?.getBoundingClientRect();
+                setCurrentLink({
+                  left: rect.left - (parentRect?.left || 0),
+                  width: rect.width,
+                  index: i,
+                });
+              }
+            }}
+            className={twMerge(
+              "transition-colors duration-200 flex items-center justify-center rounded-full h-fit px-2 py-2 text-nowrap",
+              currentLink.index === i && "text-white",
+              fired.current
+                ? ""
+                : defaultSelectedTabStyles[defaultSelectedTabIndex]
+            )}
+          >
+            {link}
+          </button>
+        ))}
+        <div
+          style={{
+            left: `${currentLink.left}px`,
+            width: `${currentLink.width}px`,
           }}
           className={twMerge(
-            "transition-colors duration-200 flex items-center justify-center rounded-full h-fit px-2 py-2 text-nowrap",
-            currentLink.index === i && "text-white",
-            fired.current
-              ? ""
-              : defaultSelectedTabStyles[defaultSelectedTabIndex]
+            `transition-[color,left,width] duration-300 absolute top-1/2 -translate-y-1/2 h-full rounded-full -z-[1]`,
+            fired.current ? "bg-primary" : "bg-transparent"
           )}
-        >
-          {link}
-        </button>
-      ))}
-      <div className={"absolute inset-0 h-full p-2 -z-[1] overflow-hidden"}>
+        />
+      </div>
+      <div className="flex-1 md:flex hidden justify-end">
+        {" "}
+        <Button className="transition-colors duration-200">Get Started</Button>
+      </div>
+      <div className={"absolute inset-0 h-full p-2 -z-[2] overflow-hidden"}>
         <div className={"relative h-full w-full overflow-hidden"}>
           <Image
             src="/assets/navbar-logo.svg"
             alt="Nexusai Logo"
             height={130}
             width={130}
-          />
-          <div
-            style={{
-              left: `calc(${currentLink.left || 0}px - 0.75rem + 0.25rem)`,
-              width: `${currentLink.width || 0}px`,
-            }}
-            className={twMerge(
-              `transition-[color,left,width] duration-300 absolute top-1/2 -translate-y-1/2 h-full rounded-full -z-[1]`,
-              fired.current ? "bg-primary" : "bg-transparent"
-            )}
           />
         </div>
       </div>

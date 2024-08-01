@@ -17,8 +17,8 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-6 gap-4">
-        <div className="col-span-3 bg-white rounded-3xl p-4 border">
+      <div className="grid lg:grid-cols-6 grid-cols-1 gap-4">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-4 border">
           <div className="bg-customColor/10 rounded-3xl p-4 mb-8">
             <h1 className="text-sm font-bold text-primary">NexusAI Starter</h1>
             <p className="mt-1 font-semibold text-4xl">$199/m</p>
@@ -63,7 +63,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="col-span-3 bg-white rounded-3xl p-4 border">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-4 border">
           <div className="w-32 absolute -mt-10 mx-36 px-3 py-2 rounded-full border border-primary shadow-primary/40 shadow-md bg-white text-center text-primary text-sm font-semibold">
             Most Popular
           </div>

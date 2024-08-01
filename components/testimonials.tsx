@@ -5,13 +5,13 @@ const Testimonials = () => {
   return (
     <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
       <div className="mx-auto max-w-lg mb-14">
-        <h1 className="text-4xl font-bold text-secondary text-center">
+        <h1 className="md:text-4xl text-2xl font-bold text-secondary text-center">
           Leading the way in AI Task Automation
         </h1>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-2 bg-white rounded-3xl p-8 border">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
+        <div className="lg:col-span-2 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/women/75.jpg"
@@ -36,7 +36,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/men/78.jpg"
@@ -63,8 +63,8 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-4 mt-4">
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+      <div className="grid lg:grid-cols-6 grid-cols-1 gap-4 mt-4">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/men/77.jpg"
@@ -88,7 +88,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/women/55.jpg"
@@ -115,8 +115,8 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-4 mt-4">
-        <div className="col-span-3 bg-white rounded-3xl p-8 border">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-4 mt-4">
+        <div className="lg:col-span-3 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/women/78.jpg"
@@ -140,7 +140,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="col-span-2 bg-white rounded-3xl p-8 border">
+        <div className="lg:col-span-2 bg-white rounded-3xl p-8 border">
           <div className="flex items-center gap-x-4">
             <Image
               src="https://randomuser.me/api/portraits/med/men/70.jpg"
