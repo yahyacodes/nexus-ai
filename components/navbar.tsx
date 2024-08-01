@@ -53,11 +53,11 @@ const Navbar = ({ tabs }: NavbarProps) => {
   return (
     <div
       className={
-        "lg:w-[60rem] md:w-[40rem] w-[25rem] border mt-4 border-neutral-300 rounded-full flex items-center justify-between p-2 relative"
+        "lg:w-[60rem] md:w-[40rem] w-[24rem] border mt-4 border-neutral-300 rounded-full flex items-center justify-between p-2 relative"
       }
     >
       <div className="flex-1"></div> {/* Left spacer */}
-      <div className="relative flex gap-5">
+      <div className="relative flex gap-2">
         {tabs.map((link, i) => (
           <button
             key={i}
