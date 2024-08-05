@@ -4,7 +4,10 @@ import { Separator } from "@/components/ui/separator";
 
 const Pricing = () => {
   return (
-    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
+    <main
+      className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl"
+      id="pricing"
+    >
       <div className="mx-auto max-w-lg mb-14">
         <h1 className="text-4xl font-bold text-secondary text-center">
           Plans to fit your business

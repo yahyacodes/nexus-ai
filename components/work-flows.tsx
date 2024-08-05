@@ -5,7 +5,10 @@ import { Button } from "./ui/button";
 
 const Workflows = () => {
   return (
-    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
+    <main
+      className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl"
+      id="about"
+    >
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-0 ">
         <div className="lg:col-span-2 mx-auto mb-10">
           <h1 className="md:text-4xl text-2xl max-w-md font-bold text-secondary">

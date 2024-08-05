@@ -10,7 +10,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl">
+    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 justify-between max-w-5xl" id="services">
       <div className="mx-auto max-w-lg mb-14">
         <h1 className="md:text-4xl text-2xl font-bold text-secondary text-center">
           <span className="text-primary">AI Driven</span> Task Automation
