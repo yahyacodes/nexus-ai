@@ -33,16 +33,18 @@ export default function Navigation() {
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <NavigationMenu className="lg:w-[60rem] md:w-[40rem] w-[24rem] md:border mt-4 border-neutral-300 rounded-full p-2 relative">
+    <div className="sticky top-0 z-50 flex items-center justify-between">
+      <NavigationMenu className="lg:w-[60rem] md:w-[40rem] w-[24rem] md:border mt-4 border-neutral-300 rounded-full p-2 relative bg-gradient-to-b from-background/10 via-background/50 to-background/80 backdrop-blur-xl">
         <NavigationMenuList className="md:w-full md:flex md:items-center md:justify-between">
           <NavigationMenuItem className="xl:mr-24 md:mr-0 md:flex hidden">
-            <Image
-              src="/assets/navbar-logo.svg"
-              alt="Nexusai Logo"
-              height={130}
-              width={130}
-            />
+            <Link href="/">
+              <Image
+                src="/assets/navbar-logo.svg"
+                alt="Nexusai Logo"
+                height={130}
+                width={130}
+              />
+            </Link>
           </NavigationMenuItem>
           <div
             className={`${
@@ -71,7 +73,7 @@ export default function Navigation() {
           </div>
           <NavigationMenuItem>
             <Button className="transition-colors duration-200 xl:ml-24 md:ml-0 hidden md:flex">
-              Get Started
+              <Link href="/waitlist">Get Started</Link>
             </Button>
           </NavigationMenuItem>
         </NavigationMenuList>
