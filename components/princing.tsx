@@ -1,6 +1,7 @@
 import { CircleCheck } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -29,7 +30,9 @@ const Pricing = () => {
               Best for small businesses and startups looking to streamline basic
               processes and boost productivity
             </p>
-            <Button className="w-full mt-4">Get Started</Button>
+            <Link href="/waitlist">
+              <Button className="w-full mt-4">Get Started</Button>
+            </Link>
           </div>
           <Separator />
           <div className="text-customColor max-w-md mt-4">
@@ -77,7 +80,9 @@ const Pricing = () => {
               Best for growing businesses and medium-sized companies seeking
               comprehensive automation solutions and deeper insights.
             </p>
-            <Button className="w-full mt-4">Get Started</Button>
+            <Link href="/waitlist">
+              <Button className="w-full mt-4">Get Started</Button>
+            </Link>
           </div>
           <Separator />
           <div className="text-customColor max-w-md mt-4">
@@ -133,7 +138,9 @@ const Pricing = () => {
             Best for large enterprises and organizations with complex automation
             needs, requiring scalable solutions and high-level customization.
           </p>
-          <Button className="w-full mt-4">Get Started</Button>
+          <Link href="/waitlist">
+            <Button className="w-full mt-4">Get Started</Button>
+          </Link>
         </div>
         <Separator />
         <div className="text-customColor max-w-xl mt-4">

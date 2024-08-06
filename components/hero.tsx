@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Avatars from "./Avatars";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -16,7 +17,9 @@ const Hero = () => {
         NexusAI: AI-powered task automation that saves time, reduces errors, and
         boosts efficiency
       </p>
-      <Button className="mt-10 py-2">Start Free Trial</Button>
+      <Link href="/waitlist">
+        <Button className="mt-10 py-2">Start Free Trial</Button>
+      </Link>
       <Avatars />
       <div className="mx-auto w-full mt-10 shadow-md rounded-3xl shadow-primary/20">
         <Image

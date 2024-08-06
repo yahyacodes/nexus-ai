@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 const PageFooter = () => {
   const footerNavs = [
@@ -42,7 +43,9 @@ const PageFooter = () => {
             Experience the future of business operations with NexusAI task
             automation - to reduce errors and boost efficiency
           </p>
-          <Button className="mt-10">Get Started</Button>
+          <Link href="/waitlist">
+            <Button className="mt-10">Get Started</Button>
+          </Link>
         </div>
         <div className="mt-8 items-center justify-between sm:flex p-8">
           <div className="grid grid-cols-3 gap-4">

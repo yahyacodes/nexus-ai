@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { BetweenHorizontalEnd, CircleArrowRight, Gauge } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const HarnessingAI = () => {
   return (
@@ -45,7 +46,9 @@ const HarnessingAI = () => {
             <CircleArrowRight className="mt-1.5" />
           </div>
 
-          <Button className="mt-6 py-2">Start Free Trial</Button>
+          <Link href="/waitlist">
+            <Button className="mt-10 py-2">Start Free Trial</Button>
+          </Link>
         </div>
       </div>
     </main>

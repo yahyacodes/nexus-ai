@@ -72,21 +72,25 @@ export default function Navigation() {
             </div>
           </div>
           <NavigationMenuItem>
-            <Button className="transition-colors duration-200 xl:ml-24 md:ml-0 hidden md:flex">
-              <Link href="/waitlist">Get Started</Link>
-            </Button>
+            <Link href="/waitlist">
+              <Button className="transition-colors duration-200 xl:ml-24 md:ml-0 hidden md:flex">
+                Get Started
+              </Button>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
 
         <NavigationMenuList className="flex md:hidden justify-center">
           <div className="flex">
             <NavigationMenuItem>
-              <Image
-                src="/assets/navbar-logo.svg"
-                alt="Nexusai Logo"
-                height={130}
-                width={130}
-              />
+              <Link href="/">
+                <Image
+                  src="/assets/navbar-logo.svg"
+                  alt="Nexusai Logo"
+                  height={130}
+                  width={130}
+                />
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem className="flex justify-end mt-2">
               <Logs className="text-primary ml-40" onClick={toggleMenu} />

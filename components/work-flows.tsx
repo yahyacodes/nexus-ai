@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Workflows = () => {
   return (
@@ -31,7 +32,9 @@ const Workflows = () => {
             <p className=" ">Customer Support Ticket Resolution</p>
           </div>
 
-          <Button className="mt-6 py-2">Start Free Trial</Button>
+          <Link href="/waitlist">
+            <Button className="mt-10 py-2">Start Free Trial</Button>
+          </Link>
         </div>
         <div className="lg:col-span-1 xl:-mx-20 mx-auto mt-10">
           <div className="w-full">
